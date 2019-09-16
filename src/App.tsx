@@ -1,25 +1,33 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Image } from './components/class/index'
+import { MyHeader } from './components/header'
+import { MyFooter } from './components/footer/index'
+
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const layoutStyle: any = {
+    border: '2px solid black', backgroundColor: "white", textAlign: 'center', margin: 'auto', width: '550px'
+  }
+  const topHeader: any = {
+    backgroundColor: "white", textAlign: 'center', margin: '35px', fontSize: '35px'
+  }
+
+  return (<div>
+
+    <div style={topHeader}>React Lesson 2 Home Work</div>
+
+    <div style={layoutStyle}>
+      <MyHeader />
+      <Image rc={require('./images/1.jpg')} />
+      <Image src={require('./images/2.jpg')} />
+      <Image rc={require('./images/3.jpg')} />
+      <Image src={require('./images/4.jpg')} />
+      <Image src={require('./images/5.jpg')} />
+      <MyFooter />
     </div>
+
+  </div>
   );
 }
 
